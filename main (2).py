@@ -43,7 +43,18 @@ while (answer == 1 and int(current_bid < int(startprice)) ):
 
      print("You bid ", current_bid)
      print("You won the item!\n")
-     print("Please pay within 24 hours\n")
+     
+     payment_method = input("Would you like to pay with Cash or creDit? (c/d):")
+
+     
+     if payment_method == 'c':
+      print("Please pay with cash within 24 hours\n")
+     elif payment_method == 'd':
+      print("Please pay with credit within 24 hours\n")
+     else:
+      print("Invalid payment method. Please try again.\n")
+      continue
+     
      print("Auction is closed") 
 
   elif (int(startprice) >= current_bid):
